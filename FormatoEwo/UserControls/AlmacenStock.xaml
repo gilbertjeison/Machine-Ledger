@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="FormatoEwo.UserControls.AlmacenStock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FormatoEwo.Util"
+             mc:Ignorable="d"  Loaded="UserControl_Loaded"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="8*"/>            
+            <RowDefinition Height="76*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Planta (sólo aplica para stock)" Height="26"/>
+        <ComboBox x:Name="cboPlanta" Grid.Row="0" Grid.Column="1" SelectedIndex="0" Height="26" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Todas"/>
+            <ComboBoxItem Content="Jabones"/>
+            <ComboBoxItem Content="Detergentes"/>
+        </ComboBox>
+        <!--<Label Grid.Row="0" Grid.Column="0" Content="Calcular mímino y máximo" Height="26"/>
+        <ComboBox x:Name="cboFIltro" Grid.Row="0" Grid.Column="1" SelectedIndex="0" Height="26" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Salidas del almacén por mes" ToolTip="Calcula cual fue la menor y mayor cantidad de items que salieron del almacén en un mes..."/>
+            <ComboBoxItem Content="Salidas del almacén por año" ToolTip="Calcula cual fue la menor y mayor cantidad de items que salieron del almacén en un año..."/>
+            <ComboBoxItem Content="Salidas del almacén total" ToolTip="Calcula cual fue la menor y mayor cantidad de items que salieron del almacén en total..."/>
+            <ComboBoxItem Content="Límite de salidas del almacén por mes" ToolTip="Calcula el mínimo y máximo (suma de items por salidas) de la cantidad de items que salieron del almacén en un mes..."/>
+            <ComboBoxItem Content="Límite de salidas del almacén por año" ToolTip="Calcula el mínimo y máximo (suma de items por salidas) de la cantidad de items que salieron del almacén en un año..."/>
+            <ComboBoxItem Content="Límite de salidas del almacén total" ToolTip="Calcula el mínimo y máximo (suma de items por salidas) de la cantidad de items que salieron del almacén en total..."/>
+            <ComboBoxItem Content="Stock total" ToolTip="Materiales completos en stock..."/>
+            <ComboBoxItem Content="Stock en cero" ToolTip="Materiales con cantidad cero (0) en stock..."/>
+            <ComboBoxItem Content="Porcentaje de desviación" ToolTip="Calcula de acuerdo a un porcentaje dado cual puede ser el máximo y mínimo de un material de acuerdo al stock..."/>
+        </ComboBox>-->
+        <Label Grid.Row="1" Grid.Column="0" Content="Filtrar materiales" Height="26"/>
+        <Grid Margin="2" Grid.Row="1" Grid.Column="1" Height="26" VerticalAlignment="Center" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="90*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="../Resources/search.png" Height="15" Width="15" Grid.Column="0" />
+            <TextBox x:Name="txtBusqueda" Margin="3 0 0 0" Grid.Column="1" Height="26" VerticalContentAlignment="Center" TextOptions.TextHintingMode="Animated" TextChanged="txtBusqueda_TextChanged" KeyDown="txtBusqueda_KeyDown" ToolTip="Presione enter para iniciar búsqueda..." ></TextBox>
+        </Grid>
+        <CheckBox  Grid.Row="2" Grid.Column="0" Height="26" VerticalAlignment="Center" VerticalContentAlignment="Center" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked">Seleccionar todo</CheckBox>
+        <Button x:Name="btnExportar" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Right" Width="120" Height="26" Click="btnExportar_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Height="16" Width="16" ></Image>
+                <TextBlock x:Name="lblSeleccionados" Text="Exportar (0)" Margin="5 0 0 0"></TextBlock>
+            </StackPanel>
+        </Button>
+        <ListView x:Name="lvStock" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" VirtualizingStackPanel.IsVirtualizing="True" local:GridViewSort.AutoSort="True" SelectionMode="Multiple" >
+            <!--<ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Margin" Value="0,0,0,5"/>
+                            <Setter Property="Template" >
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                                        <Expander IsExpanded="True" BorderBrush="Black" BorderThickness="0 0 0 1" Background="#FF6DADCB">
+                                            <Expander.Header>
+                                                <TextBlock Foreground="Black">
+                                                    <Run>Material: </Run>
+                                                    <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                                                    <TextBlock Text=" ("/>
+                                                    <TextBlock Text="{Binding Path=ItemCount}"/>
+                                                    <TextBlock Text=" salidas)" />                                                    
+                                                </TextBlock>
+                                            </Expander.Header>
+                                            <Expander.Content>
+                                                <Border Background="White" Margin="2" CornerRadius="3">
+                                                    <ItemsPresenter/>
+                                                </Border>
+                                            </Expander.Content>
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </ListView.GroupStyle>-->
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="SELECCIONADO" Width="Auto">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}" Checked="CheckBox_Checked_1" Unchecked="CheckBox_Unchecked_1"></CheckBox>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="MATERIAL" Width="90" DisplayMemberBinding="{Binding material}" local:GridViewSort.PropertyName="material"/>
+                    <GridViewColumn Header="DESCRIPCIÓN" Width="270" DisplayMemberBinding="{Binding descripcion}" local:GridViewSort.PropertyName="descripcion"/>
+                    <GridViewColumn Header="FECHA" Width="80" DisplayMemberBinding="{Binding fecha}" local:GridViewSort.PropertyName="fecha"/>
+                    <GridViewColumn Header="CANTIDAD" Width="Auto" DisplayMemberBinding="{Binding cantidad}" local:GridViewSort.PropertyName="fecha"/>
+                    <GridViewColumn Header="UBICACIÓN" Width="Auto" DisplayMemberBinding="{Binding ubicacion}" local:GridViewSort.PropertyName="ubicacion"/>
+                    <!--<GridViewColumn Header="MÍNIMO" Width="Auto" DisplayMemberBinding="{Binding minimo}" local:GridViewSort.PropertyName="minimo"/>
+                    <GridViewColumn Header="MÁXIMO" Width="Auto" DisplayMemberBinding="{Binding maximo}" local:GridViewSort.PropertyName="maximo"/>-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel x:Name="pbLoad" Height="35" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+            <ProgressBar Height="12"  Width="100" IsIndeterminate="True" Foreground="#FF6DADCB"/>
+            <Label x:Name="lblTextLoad" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FF6DADCB">Cargando...</Label>
+        </StackPanel>
+        <Label x:Name="lblCount" Grid.Column="2" Grid.ColumnSpan="5" Height="26" Grid.Row="2" FontWeight="Bold"></Label>
+    </Grid>
+</UserControl>

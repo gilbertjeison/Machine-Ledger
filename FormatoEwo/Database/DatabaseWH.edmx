@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WarehouseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="materiales">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fecha_salida" Type="datetime" Nullable="false" />
+          <Property Name="clase_movimiento" Type="varchar" MaxLength="50" />
+          <Property Name="material" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="doc_material" Type="varchar" MaxLength="50" />
+          <Property Name="ctd_um_entrada" Type="varchar" MaxLength="50" />
+          <Property Name="un_medida_entrada" Type="varchar" MaxLength="50" />
+          <Property Name="cab_documento" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="stock">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ubicacion" Type="varchar" MaxLength="200" />
+          <Property Name="material" Type="varchar" MaxLength="200" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
+          <Property Name="stock_total" Type="varchar" MaxLength="50" />
+          <Property Name="bun" Type="varchar" MaxLength="50" />
+          <Property Name="deposito" Type="varchar" MaxLength="50" />
+          <Property Name="precios_medio_movil" Type="varchar" MaxLength="50" />
+          <Property Name="valor_total" Type="varchar" MaxLength="50" />
+          <Property Name="planta" Type="int" />
+        </EntityType>
+        <EntityContainer Name="WarehouseModelStoreContainer">
+          <EntitySet Name="materiales" EntityType="Self.materiales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="stock" EntityType="Self.stock" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WarehouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="materiales">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fecha_salida" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="clase_movimiento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="doc_material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ctd_um_entrada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="un_medida_entrada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cab_documento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="stock">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ubicacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="material" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="stock_total" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="deposito" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="precios_medio_movil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="valor_total" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="planta" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="WarehouseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="materiales" EntityType="Self.materiales" />
+          <EntitySet Name="stock" EntityType="Self.stock" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WarehouseModelStoreContainer" CdmEntityContainer="WarehouseEntities">
+          <EntitySetMapping Name="materiales">
+            <EntityTypeMapping TypeName="WarehouseModel.materiales">
+              <MappingFragment StoreEntitySet="materiales">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
+                <ScalarProperty Name="clase_movimiento" ColumnName="clase_movimiento" />
+                <ScalarProperty Name="material" ColumnName="material" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="doc_material" ColumnName="doc_material" />
+                <ScalarProperty Name="ctd_um_entrada" ColumnName="ctd_um_entrada" />
+                <ScalarProperty Name="un_medida_entrada" ColumnName="un_medida_entrada" />
+                <ScalarProperty Name="cab_documento" ColumnName="cab_documento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stock">
+            <EntityTypeMapping TypeName="WarehouseModel.stock">
+              <MappingFragment StoreEntitySet="stock">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="material" ColumnName="material" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="stock_total" ColumnName="stock_total" />
+                <ScalarProperty Name="bun" ColumnName="bun" />
+                <ScalarProperty Name="deposito" ColumnName="deposito" />
+                <ScalarProperty Name="precios_medio_movil" ColumnName="precios_medio_movil" />
+                <ScalarProperty Name="valor_total" ColumnName="valor_total" />
+                <ScalarProperty Name="planta" ColumnName="planta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B35771A-DAF6-4F06-9FDD-D2084A6BBF5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormatoEwo</RootNamespace>
+    <AssemblyName>FormatoEwo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Taller\Desktop\Jeison Perlaza\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A5610E1B7891BFD8215D3D995886AA0618CE568E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FormatoEwo_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaoEF\DaoCalPM.cs" />
+    <Compile Include="DaoEF\DaoEpps.cs" />
+    <Compile Include="DaoEF\DaoEquipos.cs" />
+    <Compile Include="DaoEF\DaoEwo.cs" />
+    <Compile Include="DaoEF\DaoHerr.cs" />
+    <Compile Include="DaoEF\DaoLinea.cs" />
+    <Compile Include="DaoEF\DaoListaAcciones.cs" />
+    <Compile Include="DaoEF\DaoMateriales.cs" />
+    <Compile Include="DaoEF\DaoML.cs" />
+    <Compile Include="DaoEF\DaoPasoPaso.cs" />
+    <Compile Include="DaoEF\DaoPersonal.cs" />
+    <Compile Include="DaoEF\DaoPlantas.cs" />
+    <Compile Include="DaoEF\DaoPorque.cs" />
+    <Compile Include="DaoEF\DaoRepuestosUtilizados.cs" />
+    <Compile Include="DaoEF\DaoSMP.cs" />
+    <Compile Include="DaoEF\DaoTipos.cs" />
+    <Compile Include="Dao\DaoCalendarioPm.cs" />
+    <Compile Include="Dao\DaoPaso.cs" />
+    <Compile Include="Dao\DaoPermisosTrabajo.cs" />
+    <Compile Include="Database\calendarioPM.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\calendario_tipomtto.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\componentes.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\conjuntos.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Database.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DatabaseWH.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseWH.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DatabaseWH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseWH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DatabaseWH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseWH.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\epps.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\equipos.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ewos.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\herramientas.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\lineas.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\lista_acciones.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\maquinas.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\materiales.cs">
+      <DependentUpon>DatabaseWH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\permisos_trabajo.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\plantas.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\porques.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\programadores.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\repuestos_utilizados.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sistemas.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\smp.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\smp_pasos.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\smp_util.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\stock.cs">
+      <DependentUpon>DatabaseWH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tecnicos.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tipos.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tipos_data.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tipo_averia.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\turnos.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\CalendarioPm.cs" />
+    <Compile Include="Objetos\Componentes.cs" />
+    <Compile Include="Objetos\Conjuntos.cs" />
+    <Compile Include="Dao\DaoAreaLinea.cs" />
+    <Compile Include="Dao\DaoEpps.cs" />
+    <Compile Include="Dao\DaoEquipo.cs" />
+    <Compile Include="Dao\DaoEwo.cs" />
+    <Compile Include="Dao\DaoHerramientas.cs" />
+    <Compile Include="Dao\DaoListaAcciones.cs" />
+    <Compile Include="Dao\DaoMachineLedger.cs" />
+    <Compile Include="Dao\DaoPorques.cs" />
+    <Compile Include="Dao\DaoRepuestosUtilizados.cs" />
+    <Compile Include="Dao\DaoSmp.cs" />
+    <Compile Include="Dao\DaoTecnicos.cs" />
+    <Compile Include="EwoDatabaseDataSet.cs">
+      <DependentUpon>EwoDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EwoDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EwoDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Objetos\AreaLinea.cs" />
+    <Compile Include="Objetos\CustomCalendario.cs" />
+    <Compile Include="Objetos\CustomLineas.cs" />
+    <Compile Include="Objetos\CustomSMP.cs" />
+    <Compile Include="Objetos\Epps.cs" />
+    <Compile Include="Objetos\Equipos.cs" />
+    <Compile Include="Objetos\Ewo.cs" />
+    <Compile Include="Objetos\Herramientas.cs" />
+    <Compile Include="Objetos\ListaAcciones.cs" />
+    <Compile Include="Objetos\Machines.cs" />
+    <Compile Include="Objetos\MLSubSistemas.cs" />
+    <Compile Include="Objetos\PasoaPaso.cs" />
+    <Compile Include="Objetos\PermisosTrabajo.cs" />
+    <Compile Include="Objetos\Plantas.cs" />
+    <Compile Include="Objetos\Porques.cs" />
+    <Compile Include="Objetos\Repuestos.cs" />
+    <Compile Include="Objetos\RepuestosUtilizados.cs" />
+    <Compile Include="Objetos\Smp.cs" />
+    <Compile Include="Objetos\SmpUtil.cs" />
+    <Compile Include="Objetos\Tecnicos.cs" />
+    <Compile Include="Objetos\Validacionescs.cs" />
+    <Compile Include="Outlook\DataSourceManager.cs" />
+    <Compile Include="Outlook\OutlookGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Outlook\OutlookGrid.Designer.cs">
+      <DependentUpon>OutlookGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outlook\OutlookGridGroup.cs" />
+    <Compile Include="Outlook\OutlookGridRow.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\FormLineas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\FormLineas.Designer.cs">
+      <DependentUpon>FormLineas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\FRepuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\FRepuestos.Designer.cs">
+      <DependentUpon>FRepuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\NuevaEntradaMtto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\NuevaEntradaMtto.Designer.cs">
+      <DependentUpon>NuevaEntradaMtto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\NuevoComponente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\NuevoComponente.Designer.cs">
+      <DependentUpon>NuevoComponente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\NuevoConjunto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\NuevoConjunto.Designer.cs">
+      <DependentUpon>NuevoConjunto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\NuevoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\NuevoItem.Designer.cs">
+      <DependentUpon>NuevoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\NuevoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\NuevoSistema.Designer.cs">
+      <DependentUpon>NuevoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\Shadow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\Shadow.Designer.cs">
+      <DependentUpon>Shadow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AlmacenStock.xaml.cs">
+      <DependentUpon>AlmacenStock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ComponentesCPM.xaml.cs">
+      <DependentUpon>ComponentesCPM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CopiaObjML.xaml.cs">
+      <DependentUpon>CopiaObjML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DetalleEntradaMtto.xaml.cs">
+      <DependentUpon>DetalleEntradaMtto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Lineas.xaml.cs">
+      <DependentUpon>Lineas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\AutoClosingMessageBox .cs" />
+    <Compile Include="Util\BackgroundColorConverter.cs" />
+    <Compile Include="Util\Global.cs" />
+    <Compile Include="Util\GridViewSort.cs" />
+    <Compile Include="Util\GroupByGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\HerramientaComparer.cs" />
+    <Compile Include="Util\ImagePathConverter .cs" />
+    <Compile Include="Util\MathHelper.cs" />
+    <Compile Include="Util\SmpHandler.cs" />
+    <Compile Include="Util\SomeHelpers.cs" />
+    <Compile Include="Util\TextBoxHelper.cs" />
+    <Compile Include="Util\VirtualToggleButton.cs" />
+    <Compile Include="ViewModels\MLObjectsViewModel.cs" />
+    <Compile Include="Vistas\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Acerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Acerca.Designer.cs">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Almacen.Designer.cs">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\BunifuUIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\BunifuUIM.Designer.cs">
+      <DependentUpon>BunifuUIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CalendarioPm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CalendarioPm.Designer.cs">
+      <DependentUpon>CalendarioPm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Configuraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Configuraciones.Designer.cs">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\FormCopySelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormCopySelector.Designer.cs">
+      <DependentUpon>FormCopySelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormDetalleEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormDetalleEntrada.Designer.cs">
+      <DependentUpon>FormDetalleEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormEwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormEwo.Designer.cs">
+      <DependentUpon>FormEwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormMachineLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormMachineLedger.Designer.cs">
+      <DependentUpon>FormMachineLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormSmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormSmp.Designer.cs">
+      <DependentUpon>FormSmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Herramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Herramientas.Designer.cs">
+      <DependentUpon>Herramientas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Lineas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Lineas.Designer.cs">
+      <DependentUpon>Lineas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\MachineLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\MachineLedger.Designer.cs">
+      <DependentUpon>MachineLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\NuevoElemento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\NuevoElemento.Designer.cs">
+      <DependentUpon>NuevoElemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\NuevoPaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\NuevoPaso.Designer.cs">
+      <DependentUpon>NuevoPaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\NuevoRepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\NuevoRepuesto.Designer.cs">
+      <DependentUpon>NuevoRepuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Repuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Repuestos.Designer.cs">
+      <DependentUpon>Repuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Smp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Smp.Designer.cs">
+      <DependentUpon>Smp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\SubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\SubMenu.Designer.cs">
+      <DependentUpon>SubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VisorImagenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\VisorImagenes.Designer.cs">
+      <DependentUpon>VisorImagenes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\FormLineas.resx">
+      <DependentUpon>FormLineas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\FRepuestos.resx">
+      <DependentUpon>FRepuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\NuevaEntradaMtto.resx">
+      <DependentUpon>NuevaEntradaMtto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\NuevoComponente.resx">
+      <DependentUpon>NuevoComponente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\NuevoConjunto.resx">
+      <DependentUpon>NuevoConjunto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\NuevoItem.resx">
+      <DependentUpon>NuevoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\NuevoSistema.resx">
+      <DependentUpon>NuevoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\Shadow.resx">
+      <DependentUpon>Shadow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Acerca.resx">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Almacen.resx">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\BunifuUIM.resx">
+      <DependentUpon>BunifuUIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CalendarioPm.resx">
+      <DependentUpon>CalendarioPm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Configuraciones.resx">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormCopySelector.resx">
+      <DependentUpon>FormCopySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormDetalleEntrada.resx">
+      <DependentUpon>FormDetalleEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormEwo.resx">
+      <DependentUpon>FormEwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormMachineLedger.resx">
+      <DependentUpon>FormMachineLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormSmp.resx">
+      <DependentUpon>FormSmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Herramientas.resx">
+      <DependentUpon>Herramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Lineas.resx">
+      <DependentUpon>Lineas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\MachineLedger.resx">
+      <DependentUpon>MachineLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\NuevoElemento.resx">
+      <DependentUpon>NuevoElemento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\NuevoPaso.resx">
+      <DependentUpon>NuevoPaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\NuevoRepuesto.resx">
+      <DependentUpon>NuevoRepuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Repuestos.resx">
+      <DependentUpon>Repuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Smp.resx">
+      <DependentUpon>Smp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\SubMenu.resx">
+      <DependentUpon>SubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\VisorImagenes.resx">
+      <DependentUpon>VisorImagenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Database\DatabaseWH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatabaseWH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Database\Database.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\Database.edmx.diagram">
+      <DependentUpon>Database.edmx</DependentUpon>
+    </None>
+    <None Include="Database\DatabaseWH.edmx.diagram">
+      <DependentUpon>DatabaseWH.edmx</DependentUpon>
+    </None>
+    <None Include="EwoDatabaseDataSet.xsc">
+      <DependentUpon>EwoDatabaseDataSet.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EwoDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>EwoDatabaseDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EwoDatabaseDataSet.xss">
+      <DependentUpon>EwoDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FormatoEwo_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Database.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\DatabaseWH.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseWH.edmx</DependentUpon>
+      <LastGenOutput>DatabaseWH.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\DatabaseWH.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseWH.edmx</DependentUpon>
+      <LastGenOutput>DatabaseWH.cs</LastGenOutput>
+    </Content>
+    <Content Include="EwoDatabase.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo2.ico" />
+    <Content Include="Logo_AppEWO.ico" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\quality_icon.png" />
+    <None Include="Resources\FORMATO EWO EN BLANCO UNIFICADO.XLSX" />
+    <None Include="Resources\Sin título-2.png" />
+    <None Include="Resources\Sin título-11.png" />
+    <None Include="Resources\Sin título-1.png" />
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\Excel export.xlsx" />
+    <None Include="Resources\warehouse_logo.png" />
+    <None Include="Resources\giphy1.gif" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\left-mask2_blue.png" />
+    <Content Include="Resources\0.png" />
+    <Content Include="Resources\1.png" />
+    <Content Include="Resources\10.png" />
+    <Content Include="Resources\11.png" />
+    <Content Include="Resources\12.png" />
+    <Content Include="Resources\13.png" />
+    <Content Include="Resources\14.png" />
+    <Content Include="Resources\15.png" />
+    <Content Include="Resources\17.png" />
+    <Content Include="Resources\18.png" />
+    <Content Include="Resources\19.png" />
+    <Content Include="Resources\2.png" />
+    <Content Include="Resources\20.png" />
+    <Content Include="Resources\3.png" />
+    <Content Include="Resources\4.png" />
+    <Content Include="Resources\5.png" />
+    <Content Include="Resources\6.png" />
+    <Content Include="Resources\7.png" />
+    <Content Include="Resources\8.png" />
+    <Content Include="Resources\9.png" />
+    <None Include="Resources\calpmm detail.png" />
+    <None Include="Resources\AM.png" />
+    <None Include="Resources\excel_icon.png" />
+    <None Include="Resources\database3.ico" />
+    <None Include="Resources\database3-0.bmp" />
+    <Content Include="Resources\double_down.png" />
+    <Content Include="Resources\double_up.png" />
+    <Content Include="Resources\image007.png" />
+    <Content Include="Resources\image008.png" />
+    <Content Include="Resources\image009.png" />
+    <Content Include="Resources\image010.png" />
+    <Content Include="Resources\image213.png" />
+    <None Include="Resources\system.png" />
+    <None Include="Resources\conjunto.png" />
+    <None Include="Resources\componente.png" />
+    <Content Include="Resources\delete.png" />
+    <None Include="Resources\delete1.png" />
+    <Content Include="Resources\edit.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\machine.png" />
+    <None Include="Resources\image168.jpg" />
+    <None Include="Resources\mespack2.png" />
+    <None Include="Resources\image163.png" />
+    <None Include="Resources\barrigon animated.gif" />
+    <None Include="Resources\fab animated.gif" />
+    <None Include="Resources\detergetnte.png" />
+    <None Include="Resources\SMP MODIFICADO.xlsx" />
+    <None Include="Resources\soap.png" />
+    <None Include="Resources\validate.png" />
+    <None Include="Resources\pm.png" />
+    <None Include="Resources\ml_logo_transparent.png" />
+    <None Include="Resources\ml_logo_color.png" />
+    <None Include="Resources\ml_icon.png" />
+    <None Include="Resources\PM.. BLACK" />
+    <None Include="Resources\computer_settings1.png" />
+    <None Include="Resources\computer_settings.png" />
+    <None Include="Resources\EWO.xlsx" />
+    <None Include="Resources\productivity.png" />
+    <None Include="Resources\environment.png" />
+    <None Include="Resources\quality.png" />
+    <None Include="Resources\safety.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\attach.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\expand icon1.png" />
+    <None Include="Resources\collapse icon1.png" />
+    <None Include="Resources\expand icon.png" />
+    <None Include="Resources\collapse icon.png" />
+    <None Include="Resources\Cargando.gif" />
+    <None Include="Resources\salir2.png" />
+    <None Include="Resources\salir1.png" />
+    <None Include="Resources\developer-icon-17862.png" />
+    <None Include="Resources\salir.png" />
+    <None Include="Resources\maintenance-icon-71828.png" />
+    <None Include="Resources\work1600.png" />
+    <None Include="Resources\Work.png" />
+    <None Include="Resources\banner_2.png" />
+    <None Include="Resources\loading1.gif" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\causa_raiz.JPG" />
+    <None Include="Resources\grafico_bañera.JPG" />
+    <None Include="Resources\cheking-128.png" />
+    <None Include="Resources\next1.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\Photo-icon.png" />
+    <None Include="Resources\tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\bin\Debug\Bunifu_UI_v1.52.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\bin\Debug\CheckBoxComboBox.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\ControlzEx.3.0.2.4\lib\net40\ControlzEx.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\MahApps.Metro.1.6.1\lib\net45\MahApps.Metro.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\MaterialDesignThemes.2.4.0.1044\lib\net45\MaterialDesignThemes.Wpf.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </ReferencePath>
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\Prism.Core.6.3.0\lib\net45\Prism.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ComponentModel.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Deployment.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Management.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Runtime.Serialization.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Security.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.DataVisualization.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" />
+    <ReferencePath Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\UIAutomationProvider.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WindowsBase.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WindowsFormsIntegration.dll" />
+    <ReferencePath Include="C:\WINDOWS\assembly\GAC_MSIL\Office\15.0.0.0__71e9bce111e9429c\Office.dll">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </ReferencePath>
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Collections.Concurrent.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Collections.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ComponentModel.Annotations.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ComponentModel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ComponentModel.EventBasedAsync.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Contracts.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Debug.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tools.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tracing.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Dynamic.Runtime.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Globalization.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.IO.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Linq.Expressions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Linq.Parallel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Linq.Queryable.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Net.NetworkInformation.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Net.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Net.Requests.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ObjectModel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Reflection.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Reflection.Emit.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Reflection.Emit.ILGeneration.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Reflection.Emit.Lightweight.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Reflection.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Reflection.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Resources.ResourceManager.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.InteropServices.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.Numerics.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.Serialization.Json.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.Serialization.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.Serialization.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Security.Principal.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ServiceModel.Duplex.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ServiceModel.Http.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ServiceModel.NetTcp.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ServiceModel.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.ServiceModel.Security.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Text.Encoding.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Text.Encoding.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Text.RegularExpressions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Threading.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Threading.Tasks.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Threading.Tasks.Parallel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Xml.ReaderWriter.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Xml.XDocument.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Xml.XmlSerializer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\UserControls\AlmacenStock.g.cs" />
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\UserControls\ComponentesCPM.g.cs" />
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\UserControls\CopiaObjML.g.cs" />
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\UserControls\DetalleEntradaMtto.g.cs" />
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\UserControls\Lineas.g.cs" />
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\UserControls\Login.g.cs" />
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\FormatoEwo_Content.g.cs" />
+    <Compile Include="C:\Users\UNILEVER_MTTO\Dropbox\HPC\MttoApp\FormatoEwo\FormatoEwo\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs" />
+  </ItemGroup>
+</Project>

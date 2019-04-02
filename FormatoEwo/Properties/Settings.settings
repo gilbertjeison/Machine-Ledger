@@ -1,0 +1,32 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FormatoEwo.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="tecladoPantalla" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="appPath_" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\AppFormatos</Value>
+    </Setting>
+    <Setting Name="imagesPath_" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\AppFormatos\Images</Value>
+    </Setting>
+    <Setting Name="databasePath_" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\AppFormatos\Database</Value>
+    </Setting>
+    <Setting Name="formatsPath_" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\AppFormatos\Formats</Value>
+    </Setting>
+    <Setting Name="EwoDatabaseConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\EwoDatabase.accdb;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\EwoDatabase.accdb;Persist Security Info=True</Value>
+    </Setting>
+    <Setting Name="MachineLedger" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
