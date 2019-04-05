@@ -127,5 +127,29 @@ namespace FormatoEwo.DaoEF
             }
             return regs;
         }
+
+        public List<string> GetImagesPath()
+        {
+            List<string> list = new List<string>();
+
+            try
+            {
+                using (var context = new MttoAppEntities())
+                {
+                    // Query for all
+                    var query = (from b in context.smp_pasos select b.image_path)
+                                .Concat(from b in context.sop_pasos select b.image_path);
+
+                    list = query.ToList();                    
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Excepción al consultar imagenes en smp pasoss: " + e,
+                    "Atención", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return list;
+        }
     }
 }

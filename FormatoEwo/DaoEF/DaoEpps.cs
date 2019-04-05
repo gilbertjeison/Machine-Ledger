@@ -39,5 +39,28 @@ namespace FormatoEwo.DaoEF
 
             return list;
         }
+
+        public List<string> GetImagesPath()
+        {
+            List<string> list = new List<string>();
+
+            try
+            {
+                using (var context = new MttoAppEntities())
+                {
+                    // Query for all
+                    var query = (from b in context.epps select b.foto);
+
+                    list = query.ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Excepción al consultar imagenes en epps: " + e,
+                    "Atención", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return list;
+        }
     }
 }

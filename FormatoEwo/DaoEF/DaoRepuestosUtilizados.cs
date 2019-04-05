@@ -2,6 +2,7 @@
 using FormatoEwo.Objetos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -125,6 +126,37 @@ namespace FormatoEwo.DaoEF
                 MessageBox.Show("Excepción al editar repuesto: " + e.ToString(), "Atención", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             return regs;
+        }
+
+        public List<string> GetImagesPath()
+        {
+            List<string> list = new List<string>();
+
+            try
+            {
+                using (var context = new MttoAppEntities())
+                {
+                    // Query for all
+                    var query = (from b in context.repuestos_utilizados select b.image_path);
+
+                    list = query.ToList();
+
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        if (list[i] != null)
+                        {
+                            list[i] = Path.GetFileName(list[i]);
+                        }                        
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Excepción al consultar imagenes en repuestos utilizados: " + e,
+                    "Atención", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return list;
         }
     }
 }

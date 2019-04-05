@@ -1,7 +1,9 @@
 ﻿using FormatoEwo.Database;
 using FormatoEwo.Objetos;
+using FormatoEwo.Util;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -351,6 +353,12 @@ namespace FormatoEwo.DaoEF
 
                     //4. call SaveChanges
                     regs = context.SaveChanges();
+
+                    if (regs>0)
+                    {
+                        //BORRAR IMAGEN
+                        File.Delete(Global.DIRECTORIO_IMAGENES + @"\"+maqd.foto_path);
+                    }
                 }
 
             }
@@ -383,6 +391,12 @@ namespace FormatoEwo.DaoEF
 
                     //4. call SaveChanges
                     regs = context.SaveChanges();
+
+                    if (regs > 0)
+                    {
+                        //BORRAR IMAGEN
+                        File.Delete(Global.DIRECTORIO_IMAGENES + @"\" + sisd.image_path);
+                    }
                 }
 
             }
@@ -415,10 +429,10 @@ namespace FormatoEwo.DaoEF
 
                     //4. call SaveChanges
                     regs = context.SaveChanges();
-                    if (regs>0)
+                    if (regs > 0)
                     {
-                        //BORRAR IMAGEN DE GALERÍA
-
+                        //BORRAR IMAGEN
+                        File.Delete(Global.DIRECTORIO_IMAGENES + @"\" + cond.image_path);
                     }
                 }
 
@@ -455,6 +469,12 @@ namespace FormatoEwo.DaoEF
 
                     //4. call SaveChanges
                     regs = context.SaveChanges();
+
+                    if (regs > 0)
+                    {
+                        //BORRAR IMAGEN
+                        File.Delete(Global.DIRECTORIO_IMAGENES + @"\" + comd.image_path);
+                    }
                 }
 
             }
@@ -918,6 +938,32 @@ namespace FormatoEwo.DaoEF
 
             return list;
         }
-        
+
+        public List<string> GetImagesPath()
+        {
+            List<string> list = new List<string>();
+
+            try
+            {
+                using (var context = new MttoAppEntities())
+                {
+                    // Query for all
+                    var query = (from b in context.maquinas select b.foto_path)
+                                .Concat(from b in context.sistemas select b.image_path)
+                                .Concat(from b in context.conjuntos select b.image_path)
+                                .Concat(from b in context.componentes select b.image_path);
+
+                    list = query.ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Excepción al consultar imagenes en planta: " + e,
+                    "Atención", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return list;
+        }
+
     }
 }

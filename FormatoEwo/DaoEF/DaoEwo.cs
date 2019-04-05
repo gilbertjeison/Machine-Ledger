@@ -117,5 +117,31 @@ namespace FormatoEwo.DaoEF
 
             return list;
         }
+
+        public List<string> GetEwosImagesPath()
+        {
+            List<string> list = new List<string>();
+
+            try
+            {
+                using (var context = new MttoAppEntities())
+                {
+                    // Query for all
+                    var query = (from b in context.ewos select b.imagen_1)
+                                .Concat(from b in context.ewos select b.imagen_2)
+                                .Concat(from b in context.ewos select b.imagen_3)
+                                .Concat(from b in context.ewos select b.imagen_4);
+
+                    list = query.ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Excepción al consultar imagenes en ewos: " + e,
+                    "Atención", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return list;
+        }
     }
 }

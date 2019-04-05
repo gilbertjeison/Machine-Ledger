@@ -129,5 +129,28 @@ namespace FormatoEwo.DaoEF
             }
             return regs;
         }
+
+        public List<string> GetImagesPath()
+        {
+            List<string> list = new List<string>();
+
+            try
+            {
+                using (var context = new MttoAppEntities())
+                {
+                    // Query for all
+                    var query = (from b in context.lineas select b.image_path);
+
+                    list = query.ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Excepción al consultar imagenes en lineas: " + e,
+                    "Atención", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return list;
+        }
     }
 }
