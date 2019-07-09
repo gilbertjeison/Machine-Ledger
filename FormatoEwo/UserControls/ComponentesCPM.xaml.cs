@@ -108,19 +108,23 @@ namespace FormatoEwo.UserControls
             lblInfo.Content = listComp.Count+" componente(s)";
             lvCalendar.IsEnabled = true;
 
-            //LLEVAR EL SCROLL HASTA EL FINAL CUANDO ES AÑO 2016
-            if (cboYear.SelectedIndex == 0)
+            if (listComp.Count>0)
             {
-                DataGridColumn dtc = lvCalendar.Columns.Last();
-                Componentes lc = listComp.First();
-                lvCalendar.ScrollIntoView(lc, dtc);
+                //LLEVAR EL SCROLL HASTA EL FINAL CUANDO ES AÑO 2016
+                if (cboYear.SelectedIndex == 0)
+                {
+                    DataGridColumn dtc = lvCalendar.Columns.Last();
+                    Componentes lc = listComp.First();
+                    lvCalendar.ScrollIntoView(lc, dtc);
+                }
+                else
+                {
+                    DataGridColumn dtc = lvCalendar.Columns[1];
+                    Componentes lc = listComp.First();
+                    lvCalendar.ScrollIntoView(lc, dtc);
+                }
             }
-            else
-            {
-                DataGridColumn dtc = lvCalendar.Columns[1];
-                Componentes lc = listComp.First();
-                lvCalendar.ScrollIntoView(lc, dtc);
-            }
+            
 
             splash.Hide();
         }
