@@ -467,7 +467,7 @@ namespace FormatoEwo.Util
             int sourceX = 0, sourceY = 0, destX = 0, destY = 0;
             float nPercent = 0, nPercentW = 0, nPercentH = 0;
 
-            nPercentW = ((float)newWidth / (float)sourceWidth);
+            nPercentW = (newWidth / (float)sourceWidth);
             nPercentH = ((float)newHeight / (float)sourceHeight);
             if (nPercentH < nPercentW)
             {

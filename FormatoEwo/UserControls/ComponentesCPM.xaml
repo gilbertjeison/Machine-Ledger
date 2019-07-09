@@ -59,7 +59,7 @@
                       IsEnabled="False" 
                       VirtualizingPanel.IsVirtualizing="True"
                       EnableRowVirtualization="True" 
-                      EnableColumnVirtualization="True">
+                      EnableColumnVirtualization="True" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
 
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="{x:Type DataGridColumnHeader}">

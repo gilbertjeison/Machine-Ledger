@@ -62,39 +62,54 @@ namespace FormatoEwo.Vistas
             List<string> images = new List<string>();
             List<string> AllImages = new List<string>();
             //IMAGENES DEL EWO 
-            AllImages.AddRange(daoE.GetEwosImagesPath());
-            AllImages.AddRange(daoS.GetSmpImagesPath());
-            AllImages.AddRange(daoP.GetImagesPath());
-            AllImages.AddRange(daoL.GetImagesPath());
+            //AllImages.AddRange(daoE.GetEwosImagesPath());
+            //AllImages.AddRange(daoS.GetSmpImagesPath());
+            //AllImages.AddRange(daoP.GetImagesPath());
+            //AllImages.AddRange(daoL.GetImagesPath());
             AllImages.AddRange(daoM.GetImagesPath());
-            AllImages.AddRange(daoR.GetImagesPath());
-            AllImages.AddRange(daoEpps.GetImagesPath());
-            AllImages.AddRange(daoH.GetImagesPath());
-            AllImages.AddRange(daoPP.GetImagesPath());
-            AllImages.Add("environment.png");
-            AllImages.Add("quality.png");
-            AllImages.Add("safety.png");
-            AllImages.Add("productivity.png");
+            //AllImages.AddRange(daoR.GetImagesPath());
+            //AllImages.AddRange(daoEpps.GetImagesPath());
+            //AllImages.AddRange(daoH.GetImagesPath());
+            //AllImages.AddRange(daoPP.GetImagesPath());
+            //AllImages.Add("environment.png");
+            //AllImages.Add("quality.png");
+            //AllImages.Add("safety.png");
+            //AllImages.Add("productivity.png");
 
             images = GetRealImages(AllImages).Distinct().OrderBy(x=>x).ToList();
 
-            string[] files = System.IO.Directory.GetFiles(Global.DIRECTORIO_IMAGENES);
+            string[] files = Directory.GetFiles(Global.DIRECTORIO_IMAGENES);
             List<string> unusedFiles = new List<string>();
+            List<string> usedFiles = new List<string>();
 
             foreach (var file in files)
             {
-                if (images.FirstOrDefault(x=>x == Path.GetFileName(file)) == null)
+                
+                if (images.FirstOrDefault(x => x == Path.GetFileName(file)) == null)
                 {
-                    unusedFiles.Add(file);
+                    //unusedFiles.Add(file);
                 }
+                else
+                {
+                    usedFiles.Add(file);
+                }
+
+
             }
 
             //MOVER ARCHIVOS
-            foreach (var file in unusedFiles)
-            {               
-                string target = @"C:\Users\UNILEVER_MTTO\Pictures\Digitools Desktop\" + Path.GetFileName(file);
-                File.Move(file, target);
-            }           
+            //foreach (var file in unusedFiles)
+            //{
+            //    string target = @"C:\Users\UNILEVER_MTTO\Pictures\Digitools Desktop\" + Path.GetFileName(file);
+            //    File.Move(file, target);
+            //}
+
+            //COPIAR ARCHIVOS
+            //foreach (var file in usedFiles)
+            //{
+            //    string target = @"C:\Users\UNILEVER_MTTO\Pictures\Images ML\" + Path.GetFileName(file);
+            //    File.Copy(file, target);
+            //}
 
         }
 

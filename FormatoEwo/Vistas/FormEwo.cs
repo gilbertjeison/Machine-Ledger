@@ -1207,7 +1207,7 @@ namespace FormatoEwo.Vistas
                         + path + " Desea guardarlo en otra ubicación?", "Proceso finalizado!"
                             , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (dr == System.Windows.Forms.DialogResult.Yes)
+                if (dr == DialogResult.Yes)
                 {
                     Stream myStream;
                     SaveFileDialog saveFileDialog1 = new SaveFileDialog();
