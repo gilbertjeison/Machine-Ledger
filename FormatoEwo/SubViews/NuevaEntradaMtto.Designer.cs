@@ -151,7 +151,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtReplicas, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txtHasta, 3, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 19);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
@@ -159,16 +159,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(709, 183);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(709, 185);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(365, 104);
+            this.label4.Location = new System.Drawing.Point(364, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.Size = new System.Drawing.Size(39, 15);
             this.label4.TabIndex = 20;
             this.label4.Text = "Hasta";
             // 
@@ -176,9 +176,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 97);
+            this.label3.Location = new System.Drawing.Point(3, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 30);
+            this.label3.Size = new System.Drawing.Size(86, 30);
             this.label3.TabIndex = 19;
             this.label3.Text = "Replicar cada (semanas)";
             // 
@@ -187,7 +187,7 @@
             this.txtSMP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSMP.ForeColor = System.Drawing.Color.Black;
-            this.txtSMP.Location = new System.Drawing.Point(111, 70);
+            this.txtSMP.Location = new System.Drawing.Point(111, 72);
             this.txtSMP.Name = "txtSMP";
             this.txtSMP.Size = new System.Drawing.Size(213, 20);
             this.txtSMP.TabIndex = 23;
@@ -197,9 +197,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Location = new System.Drawing.Point(3, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 15);
+            this.label1.Size = new System.Drawing.Size(61, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Fecha de entrada";
             // 
@@ -207,11 +207,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Unilever DIN Offc Pro", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(3, 40);
+            this.label2.Location = new System.Drawing.Point(3, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 15);
+            this.label2.Size = new System.Drawing.Size(82, 30);
             this.label2.TabIndex = 11;
             this.label2.Text = "Seleccione ewo";
             // 
@@ -221,7 +221,7 @@
             this.cboEwo.DisplayMember = "desc_averia";
             this.cboEwo.DropDownWidth = 500;
             this.cboEwo.FormattingEnabled = true;
-            this.cboEwo.Location = new System.Drawing.Point(111, 37);
+            this.cboEwo.Location = new System.Drawing.Point(111, 39);
             this.cboEwo.Name = "cboEwo";
             this.cboEwo.Size = new System.Drawing.Size(213, 23);
             this.cboEwo.TabIndex = 12;
@@ -235,9 +235,9 @@
             this.dtpFech.DisplayMember = "fecha";
             this.dtpFech.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dtpFech.DropDownWidth = 300;
-            this.dtpFech.Font = new System.Drawing.Font("Unilever DIN Offc Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFech.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFech.FormattingEnabled = true;
-            this.dtpFech.Location = new System.Drawing.Point(111, 4);
+            this.dtpFech.Location = new System.Drawing.Point(111, 5);
             this.dtpFech.Name = "dtpFech";
             this.dtpFech.Size = new System.Drawing.Size(414, 23);
             this.dtpFech.TabIndex = 17;
@@ -248,7 +248,7 @@
             this.txtTiempoAverias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTiempoAverias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTiempoAverias.ForeColor = System.Drawing.Color.Black;
-            this.txtTiempoAverias.Location = new System.Drawing.Point(330, 38);
+            this.txtTiempoAverias.Location = new System.Drawing.Point(330, 39);
             this.txtTiempoAverias.Name = "txtTiempoAverias";
             this.txtTiempoAverias.Size = new System.Drawing.Size(108, 20);
             this.txtTiempoAverias.TabIndex = 0;
@@ -260,7 +260,7 @@
             this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.ForeColor = System.Drawing.Color.Black;
-            this.txtCantidad.Location = new System.Drawing.Point(444, 38);
+            this.txtCantidad.Location = new System.Drawing.Point(444, 39);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(81, 20);
             this.txtCantidad.TabIndex = 16;
@@ -271,11 +271,11 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Unilever DIN Offc Pro", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label6.Location = new System.Drawing.Point(3, 72);
+            this.label6.Location = new System.Drawing.Point(3, 75);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 15);
+            this.label6.Size = new System.Drawing.Size(100, 15);
             this.label6.TabIndex = 20;
             this.label6.Text = "SMP asignado";
             // 
@@ -286,9 +286,9 @@
             this.chkMttoPlaneado.AutoSize = true;
             this.chkMttoPlaneado.ImageIndex = 3;
             this.chkMttoPlaneado.ImageList = this.imageList1;
-            this.chkMttoPlaneado.Location = new System.Drawing.Point(531, 67);
+            this.chkMttoPlaneado.Location = new System.Drawing.Point(531, 69);
             this.chkMttoPlaneado.Name = "chkMttoPlaneado";
-            this.chkMttoPlaneado.Size = new System.Drawing.Size(118, 26);
+            this.chkMttoPlaneado.Size = new System.Drawing.Size(121, 27);
             this.chkMttoPlaneado.TabIndex = 8;
             this.chkMttoPlaneado.Tag = "17";
             this.chkMttoPlaneado.Text = "Mtto planeado";
@@ -321,9 +321,9 @@
             this.chkAveria.AutoSize = true;
             this.chkAveria.ImageIndex = 0;
             this.chkAveria.ImageList = this.imageList1;
-            this.chkAveria.Location = new System.Drawing.Point(531, 35);
+            this.chkAveria.Location = new System.Drawing.Point(531, 36);
             this.chkAveria.Name = "chkAveria";
-            this.chkAveria.Size = new System.Drawing.Size(74, 26);
+            this.chkAveria.Size = new System.Drawing.Size(75, 27);
             this.chkAveria.TabIndex = 7;
             this.chkAveria.Tag = "20";
             this.chkAveria.Text = "Avería";
@@ -336,12 +336,12 @@
             this.chkMttoPE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.chkMttoPE.AutoSize = true;
-            this.chkMttoPE.Font = new System.Drawing.Font("Unilever DIN Offc Pro", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMttoPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMttoPE.ImageIndex = 1;
             this.chkMttoPE.ImageList = this.imageList1;
-            this.chkMttoPE.Location = new System.Drawing.Point(531, 99);
+            this.chkMttoPE.Location = new System.Drawing.Point(531, 102);
             this.chkMttoPE.Name = "chkMttoPE";
-            this.chkMttoPE.Size = new System.Drawing.Size(164, 26);
+            this.chkMttoPE.Size = new System.Drawing.Size(160, 27);
             this.chkMttoPE.TabIndex = 10;
             this.chkMttoPE.Tag = "18";
             this.chkMttoPE.Text = "Mtto planeado ejecutado";
@@ -353,7 +353,7 @@
             this.txtDuracion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDuracion.ForeColor = System.Drawing.Color.Black;
-            this.txtDuracion.Location = new System.Drawing.Point(330, 70);
+            this.txtDuracion.Location = new System.Drawing.Point(330, 72);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(108, 20);
             this.txtDuracion.TabIndex = 22;
@@ -364,7 +364,7 @@
             this.txtTecnicos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTecnicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTecnicos.ForeColor = System.Drawing.Color.Black;
-            this.txtTecnicos.Location = new System.Drawing.Point(444, 70);
+            this.txtTecnicos.Location = new System.Drawing.Point(444, 72);
             this.txtTecnicos.Name = "txtTecnicos";
             this.txtTecnicos.Size = new System.Drawing.Size(81, 20);
             this.txtTecnicos.TabIndex = 23;
@@ -379,7 +379,7 @@
             this.chkMttoExtra.ImageList = this.imageList1;
             this.chkMttoExtra.Location = new System.Drawing.Point(531, 3);
             this.chkMttoExtra.Name = "chkMttoExtra";
-            this.chkMttoExtra.Size = new System.Drawing.Size(96, 26);
+            this.chkMttoExtra.Size = new System.Drawing.Size(96, 27);
             this.chkMttoExtra.TabIndex = 9;
             this.chkMttoExtra.Tag = "19";
             this.chkMttoExtra.Text = "Mtto extra";
@@ -391,9 +391,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 148);
+            this.label5.Location = new System.Drawing.Point(3, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.Size = new System.Drawing.Size(88, 15);
             this.label5.TabIndex = 18;
             this.label5.Text = "Observaciones";
             // 
@@ -403,33 +403,33 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.txtObservaciones, 4);
-            this.txtObservaciones.Font = new System.Drawing.Font("Unilever DIN Offc Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservaciones.ForeColor = System.Drawing.Color.Black;
-            this.txtObservaciones.Location = new System.Drawing.Point(111, 131);
+            this.txtObservaciones.Location = new System.Drawing.Point(111, 135);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObservaciones.Size = new System.Drawing.Size(595, 49);
+            this.txtObservaciones.Size = new System.Drawing.Size(595, 47);
             this.txtObservaciones.TabIndex = 19;
             // 
             // txtReplicas
             // 
             this.txtReplicas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReplicas.Location = new System.Drawing.Point(111, 100);
+            this.txtReplicas.Location = new System.Drawing.Point(111, 105);
             this.txtReplicas.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.txtReplicas.Name = "txtReplicas";
-            this.txtReplicas.Size = new System.Drawing.Size(213, 23);
+            this.txtReplicas.Size = new System.Drawing.Size(213, 21);
             this.txtReplicas.TabIndex = 24;
             this.txtReplicas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtHasta
             // 
             this.txtHasta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHasta.Location = new System.Drawing.Point(444, 100);
+            this.txtHasta.Location = new System.Drawing.Point(444, 105);
             this.txtHasta.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -441,7 +441,7 @@
             0,
             0});
             this.txtHasta.Name = "txtHasta";
-            this.txtHasta.Size = new System.Drawing.Size(81, 23);
+            this.txtHasta.Size = new System.Drawing.Size(81, 21);
             this.txtHasta.TabIndex = 25;
             this.txtHasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHasta.Value = new decimal(new int[] {
@@ -542,12 +542,12 @@
             this.tableLayoutPanel6.Controls.Add(this.btnActualizar, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.btnRemover, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 19);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(349, 75);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(349, 77);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // btnSelectAll
@@ -557,10 +557,10 @@
             this.btnSelectAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSelectAll.ImageIndex = 7;
             this.btnSelectAll.ImageList = this.imageList1;
-            this.btnSelectAll.Location = new System.Drawing.Point(180, 42);
+            this.btnSelectAll.Location = new System.Drawing.Point(180, 43);
             this.btnSelectAll.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnSelectAll.Name = "btnSelectAll";
-            this.btnSelectAll.Size = new System.Drawing.Size(163, 28);
+            this.btnSelectAll.Size = new System.Drawing.Size(163, 29);
             this.btnSelectAll.TabIndex = 27;
             this.btnSelectAll.Text = "Seleccionar todas";
             this.btnSelectAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -576,10 +576,10 @@
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.ImageIndex = 6;
             this.btnEditar.ImageList = this.imageList1;
-            this.btnEditar.Location = new System.Drawing.Point(6, 42);
+            this.btnEditar.Location = new System.Drawing.Point(6, 43);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(162, 28);
+            this.btnEditar.Size = new System.Drawing.Size(162, 29);
             this.btnEditar.TabIndex = 26;
             this.btnEditar.Text = "Editar entrada";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -597,7 +597,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(6, 5);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(162, 27);
+            this.btnActualizar.Size = new System.Drawing.Size(162, 28);
             this.btnActualizar.TabIndex = 25;
             this.btnActualizar.Text = "Actualizar entradas";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -616,7 +616,7 @@
             this.btnRemover.Location = new System.Drawing.Point(180, 5);
             this.btnRemover.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(163, 27);
+            this.btnRemover.Size = new System.Drawing.Size(163, 28);
             this.btnRemover.TabIndex = 24;
             this.btnRemover.Text = "Remover entrada(s)";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -653,9 +653,9 @@
             this.user_id});
             this.lvMtto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvMtto.LargeImageList = this.imageList1;
-            this.lvMtto.Location = new System.Drawing.Point(3, 19);
+            this.lvMtto.Location = new System.Drawing.Point(3, 17);
             this.lvMtto.Name = "lvMtto";
-            this.lvMtto.Size = new System.Drawing.Size(709, 264);
+            this.lvMtto.Size = new System.Drawing.Size(709, 266);
             this.lvMtto.SmallImageList = this.imageList1;
             this.lvMtto.TabIndex = 3;
             this.lvMtto.UseCompatibleStateImageBehavior = false;
@@ -725,7 +725,7 @@
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(767, 700);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Font = new System.Drawing.Font("Unilever DIN Offc Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "NuevaEntradaMtto";
             this.Padding = new System.Windows.Forms.Padding(23, 70, 23, 24);
             this.Text = "Nueva entrada de mantenimiento";
